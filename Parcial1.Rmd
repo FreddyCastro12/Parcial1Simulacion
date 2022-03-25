@@ -16,10 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 1.  La tabla mostrada contiene valores de población, en cientos de
     miles, de las diez ciudades más pobladas de cuatro países en el año
-    1967: Argentina EE. UU. Holanda Japón 29.66 77.81 8.68 110.21 7.61
-    35.50 7.31 32.14 6.35 24.79 6.02 18.88 4.10 20.02 2.64 16.38 3.80
-    16.70 1.75 13.37 2.75 9.39 1.72 11.92 2.70 9.38 1.51 10.71 2.69 8.76
-    1.42 7.80 2.51 7.63 1.31 7.70 2.44 7.50 1.29 7.00
+    1967:
 
 ```{r}
 Argentina <- c(29.66,7.61,6.35,4.10,3.80,2.75,2.70,2.69,2.51,2.44)
@@ -49,19 +46,31 @@ boxplot(Holanda,  col="blue", main = "Población de ciudades de Holanda", xlab =
 boxplot(Japon,  col="yellow", main = "Población de ciudades de Japon", xlab = "Población", horizontal = TRUE)
 ```
 
-    R/ a.Se puede identifacar que 3 de las 4 graficas cuentan con una simettria
+    R/ a.Se puede identificar que 3 de las 4 graficas cuentan con una simettria
     positiva,ya que los datos se concentran en la parte inferior de la
     distribución, donde la poblacion de las ciudades de Japon es la unica
-    que no muestra ese comportamiento, ya que en este se observa una
-    simetria normal, ademas se identifica que las poblaciones de las
-    ciudades de Japon, EEUU y Argentina cuentan con datos atipicos, para ser
-    mas especifico uno por cada pais de los .
+    que no muestra ese comportamiento ya que tiene un comportamiento mas normal
+    que las demas, ya que en este se observa una simetria normal, ademas se 
+    identifica que las poblaciones de las ciudades de Japon, EEUU y Argentina
+    cuentan con datos atipicos, para ser mas especifico uno por cada pais de los .
 
 b.  Compare los centros de cada población, sus dispersiones y su
     simetría. ¿Cuál es el país más homogéneamente habitado? ¿Cuáles son
     las características más sobresalientes? ¿Hay outliers?
 
-<!-- -->
+    R/ b. Teniendo en cuenta los diagramas de caja y bigotes se puede concluir que: 
+    
+    La población de muestra de Japon son los unicos que parecen tener una simetria
+    normal, los datos son centrados y solo tiene un dato atipico el cual es de 110,21
+
+    Los datos de Argentina tienen una simetria positiva, su centro esta en el primer cuantil,
+    tiene un solo dato atipico que es de 29.66
+
+    La grafica de los datos de Holanda tiene una simetria positiva, es la que tiene la caja más
+    grande este nos indica que tiene datos muy alejados de su mediana y no posee datos atipicos.
+
+    Los datos de la población de Estados Unidos tiene una simetria positiva, tiene su centro mas 
+    a la derecha de la mediana, tiene un dato atipico de 77.81
 
 2.  Avianca se encuentra estudiando la situación de venta de puesto en
     el vuelo Armenia -- Bogotá puesto que ha identificado que el 2% de
@@ -75,9 +84,10 @@ b.  Compare los centros de cada población, sus dispersiones y su
     distribución Poisson.
 
 ```{r}
-lambda <- 181 * 0.02
+lambda <- 180 * 0.98
 q <- 181
-ppois(180,lambda)
+resp_pois <- ppois(180,lambda)
+print(paste("El porcentaje de que las botellas que las personas que llegan a embarque puedan tener su silla asegurada y no se presenten quejas por sobre-vender sillas ante la aeronáutica civil es de: ", resp_pois*100, '%'));
 ```
 
 3.En la planta envasadora de Coca-Cola FEMSA ubicada en Tocancipá se
