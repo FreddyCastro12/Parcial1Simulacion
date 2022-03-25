@@ -9,22 +9,41 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## R Markdown\
+```{r}
+Argentina <- c(29.66,7.61,6.35,4.10,3.80,2.75,2.70,2.69,2.51,2.44)
+EEUU <- c(77.81,35.50,24.79,20.02,16.70,9.39,9.38,8.76,7.63,7.50)
+Holanda <-c(8.68,7.31,6.02,2.64,1.75,1.72,1.51,1.42,1.31,1.29)
+Japon <- c(110.21,32.14,18.88,16.38,13.37,11.92,10.71,7.80,7.70,7.00)
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+par(mfrow= c(2,2))
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
+boxplot(Holanda,  col="pink", main = "Población de ciudades de Holanda", xlab = "Tamanio de langostinos(mm)", ylab = "Frecuencia", horizontal = FALSE)
+boxplot(Japon,  col="blue", main = "Población de ciudades de Japon", xlab = "Tamanio de langostinos(mm)", ylab = "Frecuencia", horizontal = FALSE)
+
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+boxplot(Argentina,  col="pink", main = "Población de ciudades de Argentina", xlab = "Tamanio de langostinos(mm)", ylab = "Frecuencia",Xlim=c(0,30), horizontal = TRUE)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+boxplot(EEUU,  col="pink", main = "Población de ciudades de EEUU", xlab = "Tamanio de langostinos(mm)", ylab = "Frecuencia", horizontal = TRUE)
+```
+
+```{r}
+boxplot(Holanda,  col="pink", main = "Población de ciudades de Holanda", xlab = "Tamanio de langostinos(mm)", ylab = "Frecuencia", horizontal = TRUE)
+```
+
+```{r}
+boxplot(Japon,  col="pink", main = "Población de ciudades de Japon", xlab = "Tamanio de langostinos(mm)", ylab = "Frecuencia", horizontal = TRUE)
+```
+
+
+```{r}
+lambda <- 181 * 0.02
+q <- 180
+ppois(180,lambda)
+```
