@@ -61,6 +61,8 @@ b.  Compare los centros de cada población, sus dispersiones y su
     simetría. ¿Cuál es el país más homogéneamente habitado? ¿Cuáles son
     las características más sobresalientes? ¿Hay outliers?
 
+<!-- -->
+
 2.  Avianca se encuentra estudiando la situación de venta de puesto en
     el vuelo Armenia -- Bogotá puesto que ha identificado que el 2% de
     las personas que reservaron puesto, no se presentan a la hora del
