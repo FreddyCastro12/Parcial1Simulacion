@@ -93,8 +93,7 @@ b.   Compare los centros de cada población, sus dispersiones y su
 lambda <- 180 * 0.98
 q <- 181
 resp_pois <- ppois(180,lambda)
-print(paste("El porcentaje de  que las personas que llegan 
- embarque puedan tener su silla asegurada y no se presenten quejas es de: ",round(resp_pois*100,4),'%'));
+print(paste("El porcentaje de  que las personas que llegan embarque puedan tener su silla asegurada: ",round(resp_pois*100,4),'%'));
 ```
 
 3.En la planta envasadora de Coca-Cola FEMSA ubicada en Tocancipá se
