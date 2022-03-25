@@ -93,9 +93,8 @@ b.   Compare los centros de cada población, sus dispersiones y su
 lambda <- 180 * 0.98
 q <- 181
 resp_pois <- ppois(180,lambda)
-print(paste("El porcentaje de que las botellas que las personas que llegan 
- embarque puedan tener su silla asegurada y no se presenten 
- quejas por sobre-vender sillas ante la aeronáutica civil es de: ",resp_pois*100,'%'));
+print(paste("El porcentaje de  que las personas que llegan 
+ embarque puedan tener su silla asegurada y no se presenten quejas es de: ",round(resp_pois*100,4),'%'));
 ```
 
 3.En la planta envasadora de Coca-Cola FEMSA ubicada en Tocancipá se
@@ -111,9 +110,7 @@ media <- 400
 ds <- 5
 res <- pnorm(415,media,ds,lower.tail = FALSE)
 
-print(paste("El porcentaje de que las botellas que son declaradas producto 
- NO CONFORME es de: ",res*100,'%'))
+print(paste("El porcentaje de que las botellas que son declaradas
+ NO CONFORME es de: ",round(res*100,4),'%'))
 
 ```
-
-`res`
